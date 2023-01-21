@@ -1,0 +1,214 @@
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  box-sizing: border-box;
+  animation: mymove 1s forwards ease-out; }
+  body::-webkit-scrollbar {
+    width: 0.3rem; }
+  body::-webkit-scrollbar-thumb {
+    background: #55c57a; }
+
+@keyframes mymove {
+  0% {
+    padding: 0; }
+  100% {
+    padding: 3rem; } }
+
+@keyframes headerPolygon {
+  0% {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); }
+  100% {
+    clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%); } }
+
+@keyframes moveFromLeft {
+  0% {
+    transform: translateX(-10rem);
+    opacity: 0; }
+  80% {
+    transform: translateX(1rem); }
+  100% {
+    transform: translateX(0);
+    opacity: 1; } }
+
+@keyframes moveFromRigth {
+  0% {
+    transform: translateX(10rem);
+    opacity: 0; }
+  80% {
+    transform: translateX(-1rem); }
+  100% {
+    transform: translateX(0);
+    opacity: 1; } }
+
+@keyframes moveFromBottom {
+  0% {
+    transform: translatey(4rem);
+    opacity: 0; }
+  70% {
+    transform: translateY(-2rem);
+    opacity: 0.7; }
+  100% {
+    transform: translateY(0);
+    opacity: 1; } }
+
+body {
+  font-family: 'Lato', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1.7;
+  color: #777; }
+
+.heading-primary {
+  margin-bottom: 5rem;
+  color: #fff;
+  text-transform: uppercase;
+  backface-visibility: hidden; }
+  .heading-primary--main {
+    display: block;
+
+    font-size: 8rem;
+    font-weight: 700;
+    letter-spacing: 2rem;
+
+    animation: moveFromLeft 1.5s forwards ease-out; }
+  .heading-primary--sub {
+    display: block;
+
+    font-size: 3rem;
+    font-weight: 700;
+    letter-spacing: 1rem;
+
+    animation: moveFromRigth 1.5s forwards ease-out; }
+
+.heading-secondary {
+  display: inline-block;
+
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: transparent;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+
+  background-image: linear-gradient(to right, #7ed56f, #28b485);
+  -webkit-background-clip: text;
+
+  transition: all 0.2s; }
+  .heading-secondary:hover {
+    transform: skewY(5deg) skewX(5deg) scale(1.1);
+    text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2); }
+
+.u-center-text {
+  text-align: center; }
+
+.u-margin-bottom-8 {
+  margin-bottom: 8rem; }
+
+.btn::after {
+  content: '';
+
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+
+  display: inline-block;
+
+  width: 100%;
+  height: 100%;
+
+  border-radius: 10rem;
+
+  transition: all 0.3s; }
+
+.btn:link, .btn:visited {
+  position: relative;
+
+  display: inline-block;
+
+  padding: 1rem 2.5rem;
+
+  text-decoration: none;
+  text-transform: uppercase;
+
+  border-radius: 10rem;
+
+  transition: all 0.3s; }
+
+.btn--animated {
+  animation: moveFromBottom 0.6s forwards ease-in-out 1.3s;
+  animation-fill-mode: backwards; }
+
+.btn:hover {
+  transform: translateY(-0.3rem);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
+  .btn:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0; }
+
+.btn:active {
+  transform: translateY(-0.1rem);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
+
+.btn--white {
+  color: #777;
+  background-color: #fff; }
+  .btn--white::after {
+    background-color: #fff; }
+
+.section-about {
+  margin-top: -20vh;
+  padding: 25rem 0;
+  background-color: #f7f7f7; }
+
+.header {
+  position: relative;
+
+  height: 95vh;
+
+  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.798), rgba(40, 180, 133, 0.798)), url(/img/hero.jpg);
+  background-position: top;
+  background-size: cover;
+
+  animation: headerPolygon 0.4s forwards 1.2s ease-out; }
+  .header__logo-box {
+    position: absolute;
+    top: 5rem;
+    left: 5.5rem; }
+  .header__logo {
+    height: 4rem; }
+  .header-box {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    text-align: center; }
+
+.row {
+  max-width: 114rem;
+  margin: 0 auto;
+  color: black; }
+  .row::after {
+    content: '';
+    clear: both;
+    display: table; }
+  .row:not(:last-child) {
+    margin-bottom: 8rem; }
+  .row [class^='col-'] {
+    float: left; }
+    .row [class^='col-']:not(:last-child) {
+      margin-right: 6rem; }
+  .row .col-1-of-2 {
+    width: calc((100% - 6rem) / 2); }
+  .row .col-1-of-3 {
+    width: calc((100% - (6rem) * 2) / 3); }
+  .row .col-2-of-3 {
+    width: calc(2 * ((100% - 2 * 6rem) / 3) + 6rem); }

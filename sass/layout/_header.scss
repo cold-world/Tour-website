@@ -1,0 +1,34 @@
+.header {
+  position: relative;
+
+  height: 95vh;
+
+  background-image: linear-gradient(
+      to right bottom,
+      rgba($color-primary-light, 0.798),
+      rgba($color-primary-dark, 0.798)
+    ),
+    url(/img/hero.jpg);
+  background-position: top;
+  background-size: cover;
+
+  animation: headerPolygon 0.4s forwards 1.2s ease-out;
+
+  &__logo-box {
+    position: absolute;
+    top: 5rem;
+    left: 5.5rem;
+  }
+
+  &__logo {
+    height: 4rem;
+  }
+  &-box {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    text-align: center;
+  }
+}
