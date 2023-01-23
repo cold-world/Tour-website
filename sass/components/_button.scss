@@ -16,6 +16,7 @@
 
     transition: all 0.3s;
   }
+  &,
   &:link,
   &:visited {
     position: relative;
@@ -30,6 +31,8 @@
     border-radius: 10rem;
 
     transition: all 0.3s;
+    border: none;
+    cursor: pointer;
   }
 
   &--animated {
@@ -47,7 +50,8 @@
     }
   }
 
-  &:active {
+  &:active,
+  &:hover {
     transform: translateY(-0.1rem);
     box-shadow: 0 0.5rem 1rem rgba($color-black, 0.2);
   }
@@ -81,8 +85,6 @@
     font-size: $default-font-size;
     color: $color-primary;
     text-decoration: none;
-
-    border-bottom: 1px solid $color-primary;
 
     transition: all 0.2s;
   }
