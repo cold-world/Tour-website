@@ -26,12 +26,14 @@
 
   &__item {
     display: inline-block;
+
     &:not(:last-child) {
       margin-right: 1.5rem;
     }
   }
 
   &__link {
+
     &:link,
     &:visited {
       display: inline-block;

@@ -26,6 +26,7 @@
 
     &--back {
       transform: rotateY(180deg);
+
       &-1 {
         background-image: linear-gradient(
           to right bottom,
@@ -33,6 +34,7 @@
           $color-secondary-dark
         );
       }
+
       &-2 {
         background-image: linear-gradient(
           to right bottom,
@@ -40,6 +42,7 @@
           $color-primary-dark
         );
       }
+
       &-3 {
         background-image: linear-gradient(
           to right bottom,
@@ -53,6 +56,7 @@
   &:hover &__side--front {
     transform: rotateY(-180deg);
   }
+
   &:hover &__side--back {
     transform: rotateY(0);
   }
@@ -66,6 +70,7 @@
     clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
     border-top-left-radius: 3px;
     border-top-right-radius: 3px;
+
     &--1 {
       background-image: linear-gradient(
           to right bottom,
@@ -74,10 +79,12 @@
         ),
         url(../img/nat-5.jpg);
     }
+
     &--2 {
       background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark),
         url(../img/nat-6.jpg);
     }
+
     &--3 {
       background-image: linear-gradient(
           to right bottom,
@@ -106,6 +113,7 @@
     padding: 1rem 1.5rem;
     -webkit-box-decoration-break: clone;
     box-decoration-break: clone;
+
     &--1 {
       background-image: linear-gradient(
         to right bottom,
@@ -113,6 +121,7 @@
         rgba($color-secondary-dark, 0.85)
       );
     }
+
     &--2 {
       background-image: linear-gradient(
         to right bottom,
@@ -120,6 +129,7 @@
         rgba($color-primary-dark, 0.85)
       );
     }
+
     &--3 {
       background-image: linear-gradient(
         to right bottom,
@@ -131,10 +141,12 @@
 
   &__details {
     padding: 3rem;
+
     ul {
       width: 80%;
       margin: 0 auto;
       list-style: none;
+
       li {
         padding: 1rem;
         font-size: 1.5rem;
