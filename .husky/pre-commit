@@ -1,0 +1,4 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+npx stylelint '**/*.*css' --fix --customSyntax postcss-scss --config-basedir
