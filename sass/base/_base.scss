@@ -1,24 +1,40 @@
 *,
 *::after,
 *::before {
-	box-sizing: inherit;
-	margin: 0;
-	padding: 0;
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
 }
 
 html {
-	font-size: 62.5%;
+  @include respond(tab-land) {
+    font-size: 56.25%; //1rem = 9px, 9px/16 = 56.25%
+  }
+
+  @include respond(tab-port) {
+    font-size: 50%; //1rem = 8px, 8px/16 = 50% + for phone same size
+  }
+
+  @include respond(desktop) {
+    font-size: 75%; //1rem = 12px, 12px/16 = 75%
+  }
+  //this defines 1rem
+  font-size: 62.5%; //1rem = 10px/16px = 62.5%
 }
 
 body {
-	box-sizing: border-box;
-	animation: mymove 1s forwards ease-out;
+  box-sizing: border-box;
+  animation: mymove 1s forwards ease-out;
 
-	&::-webkit-scrollbar {
-		width: 0.3rem;
-	}
+  &::-webkit-scrollbar {
+    width: 0.3rem;
+  }
 
-	&::-webkit-scrollbar-thumb {
-		background: $color-primary;
-	}
+  &::-webkit-scrollbar-thumb {
+    background: $color-primary;
+  }
+
+  @include respond(tab-land) {
+    animation: none;
+  }
 }
