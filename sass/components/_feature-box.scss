@@ -1,4 +1,9 @@
 .feature-box {
+
+  @include respond(tab-port) {
+    padding: 2rem;
+  }
+
   padding: 2.5rem;
 
   font-size: 1.5rem;
@@ -10,11 +15,12 @@
 
   transition: transform 0.3s;
 
-  @include respond(tab-port) {
-    padding: 2rem;
-  }
-
   &__icon {
+
+    @include respond(tab-port) {
+      margin-bottom: 0;
+    }
+
     display: inline-block;
 
     margin-bottom: 0.5rem;
@@ -25,10 +31,6 @@
     background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark);
     -webkit-background-clip: text;
     background-clip: text;
-
-    @include respond(tab-port) {
-      margin-bottom: 0;
-    }
 
     &:hover {
       transform: translateY(-1.5rem) scale(1.03);

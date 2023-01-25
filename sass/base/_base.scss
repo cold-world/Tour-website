@@ -23,6 +23,11 @@ html {
 }
 
 body {
+
+  @include respond(tab-land) {
+    animation: none;
+  }
+
   box-sizing: border-box;
   animation: mymove 1s forwards ease-out;
 
@@ -32,9 +37,5 @@ body {
 
   &::-webkit-scrollbar-thumb {
     background: $color-primary;
-  }
-
-  @include respond(tab-land) {
-    animation: none;
   }
 }

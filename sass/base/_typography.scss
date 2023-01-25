@@ -12,6 +12,12 @@ body {
   backface-visibility: hidden;
 
   &--main {
+
+    @include respond(phone) {
+      font-size: 5rem;
+      letter-spacing: 1rem;
+    }
+
     display: block;
 
     font-size: 8rem;
@@ -19,14 +25,15 @@ body {
     letter-spacing: 2rem;
 
     animation: moveFromLeft 1.5s forwards ease-out;
-
-    @include respond(phone) {
-      letter-spacing: 1rem;
-      font-size: 5rem;
-    }
   }
 
   &--sub {
+
+    @include respond(phone) {
+      font-size: 2rem;
+      letter-spacing: 0.5rem;
+    }
+
     display: block;
 
     font-size: 3rem;
@@ -34,15 +41,19 @@ body {
     letter-spacing: 1rem;
 
     animation: moveFromRigth 1.5s forwards ease-out;
-
-    @include respond(phone) {
-      letter-spacing: 0.5rem;
-      font-size: 2rem;
-    }
   }
 }
 
 .heading-secondary {
+
+  @include respond(tab-port) {
+    font-size: 3rem;
+  }
+
+  @include respond(phone) {
+    font-size: 2.5rem;
+  }
+
   display: inline-block;
 
   font-size: 3.5rem;
@@ -56,14 +67,6 @@ body {
   background-clip: text;
 
   transition: all 0.2s;
-
-  @include respond(tab-port) {
-    font-size: 3rem;
-  }
-
-  @include respond(phone) {
-    font-size: 2.5rem;
-  }
 
   &:hover {
     transform: skewY(5deg) skewX(5deg) scale(1.1);
