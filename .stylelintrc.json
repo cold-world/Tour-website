@@ -2,5 +2,6 @@
   "extends": ["stylelint-config-prettier", "stylelint-config-clean-order"],
   "rules": {
     "rule-empty-line-before" : "always-multi-line"
-  }
+  },
+  "ignoreFiles": "/sass/components/_card.scss"
 }

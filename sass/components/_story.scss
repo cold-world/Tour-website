@@ -1,4 +1,15 @@
 .story {
+
+  @include respond(tab-port) {
+    width: 100%;
+    padding: 4rem;
+    padding-left: 7rem;
+  }
+
+  @include respond(phone) {
+    transform: skewX(0);
+  }
+
   transform: skewX(-12deg);
 
   width: 75%;
@@ -12,21 +23,16 @@
   border-radius: 3px;
   box-shadow: 0 3rem 6rem rgba($color-black, 0.1);
 
-  @include respond(tab-port) {
-    width: 100%;
-    padding: 4rem;
-    padding-left: 7rem;
-  }
-
-  @include respond(phone) {
-    transform: skewX(0);
-  }
-
   & > * {
     transform: skewX(12deg);
   }
 
   &__shape {
+
+    @include respond(phone) {
+      transform: translateX(-2rem) skewX(0);
+    }
+
     position: relative;
     transform: translateX(-2rem) skewX(12deg);
 
@@ -37,10 +43,6 @@
     height: 15rem;
 
     clip-path: circle(50% at 50% 50%);
-
-    @include respond(phone) {
-      transform: translateX(-2rem) skewX(0);
-    }
   }
 
   &__img {
@@ -50,11 +52,12 @@
   }
 
   &__text {
-    transform: skewX(12deg);
 
     @include respond(phone) {
       transform: skewX(0);
     }
+
+    transform: skewX(12deg);
   }
 
   &__caption {
