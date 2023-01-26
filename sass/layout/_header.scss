@@ -8,7 +8,7 @@
       rgba($color-primary-light, 0.798),
       rgba($color-primary-dark, 0.798)
     ),
-    url(/img/hero.jpg);
+    url(/img/hero-small.jpg);
   background-position: top;
   background-size: cover;
 
@@ -28,5 +28,23 @@
     @include absCenter;
 
     text-align: center;
+  }
+
+  @media (min-resolution: 192dpi) and (min-width: 37.5em) {
+    background-image: linear-gradient(
+        to right bottom,
+        rgba($color-primary-light, 0.798),
+        rgba($color-primary-dark, 0.798)
+      ),
+      url(/img/hero.jpg);
+  }
+
+  @media (min-width: 125em) {
+    background-image: linear-gradient(
+        to right bottom,
+        rgba($color-primary-light, 0.798),
+        rgba($color-primary-dark, 0.798)
+      ),
+      url(/img/hero.jpg);
   }
 }

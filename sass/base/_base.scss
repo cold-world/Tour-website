@@ -23,7 +23,6 @@ html {
 }
 
 body {
-
   @include respond(tab-land) {
     animation: none;
   }
@@ -37,5 +36,10 @@ body {
 
   &::-webkit-scrollbar-thumb {
     background: $color-primary;
+  }
+
+  ::selection {
+    background-color: $color-primary;
+    color: $color-white;
   }
 }
