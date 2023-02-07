@@ -8,7 +8,7 @@
       rgba($color-primary-light, 0.798),
       rgba($color-primary-dark, 0.798)
     ),
-    url(/img/hero-small.jpg);
+    url(../img/hero-small.jpg);
   background-position: top;
   background-size: cover;
 
@@ -36,7 +36,7 @@
         rgba($color-primary-light, 0.798),
         rgba($color-primary-dark, 0.798)
       ),
-      url(/img/hero.jpg);
+      url(../img/hero.jpg);
   }
 
   @media (min-width: 125em) {
@@ -45,6 +45,6 @@
         rgba($color-primary-light, 0.798),
         rgba($color-primary-dark, 0.798)
       ),
-      url(/img/hero.jpg);
+      url(../img/hero.jpg);
   }
 }

@@ -43,8 +43,8 @@ body {
   body::-webkit-scrollbar-thumb {
     background: #55c57a; }
   body ::selection {
-    background-color: #55c57a;
-    color: #fff; }
+    color: #fff;
+    background-color: #55c57a; }
 
 @keyframes mymove {
   0% {
@@ -804,7 +804,7 @@ body {
 .header {
   position: relative;
   height: 95vh;
-  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.798), rgba(40, 180, 133, 0.798)), url(/img/hero-small.jpg);
+  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.798), rgba(40, 180, 133, 0.798)), url(../img/hero-small.jpg);
   background-position: top;
   background-size: cover;
   animation: headerPolygon 0.4s forwards 1.2s ease-out; }
@@ -822,10 +822,10 @@ body {
     text-align: center; }
   @media (min-resolution: 192dpi) and (min-width: 37.5em) {
     .header {
-      background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.798), rgba(40, 180, 133, 0.798)), url(/img/hero.jpg); } }
+      background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.798), rgba(40, 180, 133, 0.798)), url(../img/hero.jpg); } }
   @media (min-width: 125em) {
     .header {
-      background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.798), rgba(40, 180, 133, 0.798)), url(/img/hero.jpg); } }
+      background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.798), rgba(40, 180, 133, 0.798)), url(../img/hero.jpg); } }
 
 .row {
   max-width: 114rem;
